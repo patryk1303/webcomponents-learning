@@ -1,0 +1,14 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $darkBlue;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18pt;
+  color: white;
+
+  @include desktopMax {
+    font-size: 14pt;
+  }
+}

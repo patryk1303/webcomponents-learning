@@ -1,0 +1,23 @@
+{
+  "name": "timetables-site-wc",
+  "version": "0.1.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "rm -rf .cache && rm -rf dist && parcel src/index.html",
+    "build": "parcel build src/index.html --public-url ./"
+  },
+  "devDependencies": {
+    "@types/node": "^11.13.4",
+    "parcel": "^1.12.3",
+    "parcel-plugin-webcomponents": "^1.2.0",
+    "sass": "^1.18.0",
+    "typescript": "^3.4.3"
+  },
+  "dependencies": {
+    "@webcomponents/webcomponentsjs": "^2.2.8",
+    "handlebars": "^4.1.2",
+    "moment": "^2.24.0",
+    "reset-css": "^4.0.1"
+  }
+}

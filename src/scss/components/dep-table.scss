@@ -1,0 +1,36 @@
+.dep-table {
+  width: 100vw;
+  height: 100vh;
+
+  display: grid;
+  grid-template-columns: 1fr 1rem 1fr;
+  grid-template-rows: 100px auto 2fr;
+  grid-template-areas: 
+    "line-data . my-direction-header"
+    "departures . my-direction"
+    "info-slider . city-slider"; 
+
+  &__line-data {
+    grid-area: line-data;
+  }
+
+  &__my-direction-header {
+    grid-area: my-direction-header;
+  }
+
+  &__departures {
+    grid-area: departures;
+  }
+
+  &__my-direction {
+    grid-area: my-direction;
+  }
+
+  &__info-slider {
+    grid-area: info-slider;
+  }
+
+  &__city-slider {
+    grid-area: city-slider;
+  }
+}

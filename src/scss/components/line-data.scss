@@ -1,0 +1,41 @@
+.line-data {
+  $radius: 0.5rem;
+
+  
+  width: 100%;
+  height: 100%;
+  background-color: white;
+
+  border-radius: 0 $radius $radius 0;
+
+  display: flex;
+
+  &__organizers {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+
+    color: black;
+
+    flex-grow: 1;
+    text-align: center;
+  }
+
+  &__organizer {
+    flex: 1;
+  }
+
+  &__clock {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+
+    background-color: $blue;
+    color: $darkBlue;
+
+    font-weight: bold;
+    text-shadow: grey 1px 1px;
+
+    border-radius: 0 $radius $radius 0;
+  }
+}

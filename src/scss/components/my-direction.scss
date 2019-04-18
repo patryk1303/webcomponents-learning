@@ -1,0 +1,50 @@
+.my-direction {
+
+}
+
+.my-direction-row {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+
+  background-color: $blue;
+  height: 50px;
+
+  border-right: 1rem solid $red;
+  border-radius: 2rem 0 0 2rem;
+
+  &__name {
+    flex-grow: 1;
+    text-shadow: grey 1px 1px;
+    font-weight: bold;
+  }
+
+  &__lines {
+    justify-self: flex-end;
+    position: relative;
+    right: -1.75rem;
+  }
+
+  &__line-bubble {
+    box-sizing: border-box;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 45px;
+    height: 45px;
+
+    background-color: $darkBlue;
+    border: 1px solid $blue;
+    border-radius: 100%;
+
+    margin: 0 0.1rem;
+
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+}

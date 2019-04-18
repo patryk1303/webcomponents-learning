@@ -1,0 +1,14 @@
+{
+  "include": [
+    "./src/**/*"
+  ],
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "module": "es2015",
+    "moduleResolution": "node",
+    "target": "es6",
+    "sourceMap": true,
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true
+  }
+}

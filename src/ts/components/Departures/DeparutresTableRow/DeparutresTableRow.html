@@ -1,0 +1,19 @@
+<div class="departures-table__row {{#each usedClasses}} {{this}} {{/each}}">
+  <div class="departures-table__row-data departures-table__row-data--line">
+    {{rowData.line}}
+  </div>
+  <div class="departures-table__row-data departures-table__row-data--direction">
+    {{rowData.direction}}
+  </div>
+  <div class="departures-table__row-data departures-table__row-data--time">
+    {{#if rowData.estimated}}
+      <span>E</span>
+    {{/if}}
+    
+    {{#if rowData.atStop}}
+      <span> &lt;&lt;&lt; </span>
+    {{else}}
+      <span>{{rowData.departure}}</span>
+    {{/if}}
+  </div>
+</div>
