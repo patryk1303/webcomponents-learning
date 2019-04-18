@@ -1,6 +1,12 @@
 <line-data class="departures-page__line-data"></line-data>
-<div class="departures-page__my-direction-header"></div>
+<div class="departures-page__my-direction-header">
+  <div class="my-directions-header">
+    <span class="my-directions-header__divider" aria-hidden="true"></span>
+    <div class="my-directions-header__label" aria-label="Mój kieurnek to:">Mój kierunek to:</div>
+    <span class="my-directions-header__line" aria-hidden="true"></span>
+  </div>
+</div>
 <departures-table class="departures-page__departures" data-stop-id="{{stopId}}"></departures-table>
-<div class="departures-page__my-direction"></div>
+<my-directions class="departures-page__my-direction" directions="{{directions}}"></my-directions>
 <div class="departures-page__info-slider"></div>
 <div class="departures-page__city-slider"></div>

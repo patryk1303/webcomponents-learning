@@ -1,0 +1,14 @@
+{{#each directions}}
+<div class="my-directions-row">
+  <div class="my-directions-row__name">
+    {{name}}
+  </div>
+  <div class="my-directions-row__lines">
+    {{#each lines}}
+    <span class="my-directions-row__line-bubble">
+      {{this}}
+    </span>
+    {{/each}}
+  </div>
+</div>
+{{/each}}
