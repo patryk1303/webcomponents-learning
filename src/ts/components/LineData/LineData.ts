@@ -12,6 +12,8 @@ class LineData extends BaseElement {
   constructor() {
     super(template)
 
+    this.classList.add('line-data')
+
     this.intervalId = setInterval(this.render.bind(this), 1000)
   }
 

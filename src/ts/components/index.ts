@@ -1,3 +1,5 @@
-import './Departures'
-import './DepTable/DepTable'
+import './DeparturesList/DeparturesList'
+import './DeparturesListRow/DeparturesListRow'
+import './DeparturesPage/DeparturesPage'
+import './DeparturesTable/DeparturesTable'
 import './LineData/LineData'

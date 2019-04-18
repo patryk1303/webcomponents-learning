@@ -1,7 +1,7 @@
 import { BaseElement } from "../BaseElement";
 import { registerElement } from "../../decorators";
 
-const template = require('./Departures.html')
+const template = require('./DeparturesTable.html')
 
 interface DepartureRow {
   direction_id: number,
@@ -21,16 +21,22 @@ interface Departure {
 }
 
 @registerElement('departures-table')
-class Departures extends BaseElement {
-  departures: any;
+class DeparturesTable extends BaseElement {
+  departures: Departure;
   intervalId: NodeJS.Timeout;
 
   constructor() {
     super(template)
 
-    this.departures = []
+    this.classList.add('departures-table')
 
-    clearInterval(this.intervalId)
+    this.setupInterval()
+  }
+  
+  setupInterval() {
+    if (this.intervalId) {
+      clearInterval(this.intervalId)
+    }
 
     this.intervalId = setInterval(this.fetchDepartures.bind(this), 15000)
   }
@@ -46,19 +52,19 @@ class Departures extends BaseElement {
   }
 
   render() {
-    const templateData = {
-      departures: this.departures.rows,
-      directions: this.departures.directions
-    };
-
-    // console.trace(templateData)
-
-    this.innerHTML = this.compiledTemplate(templateData)
+    if (this.departures) {
+      const templateData = {
+        departures: JSON.stringify(this.departures.rows),
+        directions: JSON.stringify(this.departures.directions)
+      }
+      
+      this.innerHTML = this.compiledTemplate(templateData)
+    }
   }
 
   attributeChangedCallback(attrName: string, oldVal: any, newVal: any) {
     if(attrName === 'data-stop-id') {
-      console.log('aa')
+      this.setupInterval()
       this.fetchDepartures()
     } else {
       this.render()

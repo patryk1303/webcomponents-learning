@@ -1,0 +1,21 @@
+.departures-table {
+  &__header {
+    box-sizing: border-box;
+    padding: 1rem;
+    display: flex;
+    justify-items: center;
+    font-weight: bold;
+    height: 50px;
+  }
+
+  &__nearest {
+    flex: 1;
+    text-transform: uppercase;
+  }
+
+  &__stop-name {
+    flex: 1;
+    text-align: right;
+    justify-self: flex-end;
+  }
+}

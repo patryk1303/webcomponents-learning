@@ -1,0 +1,9 @@
+<departures-list-row header="true"></departures-list-row>
+{{#each departures}}
+  <departures-list-row 
+    line="{{this.line_name}}"
+    direction="{{lookup ../directions this.direction_id}}"
+    at-stop="{{this.at_stop}}"
+    departure="{{this.time}}"
+    estimated="{{this.is_estimated}}"></departures-list-row>
+{{/each}}

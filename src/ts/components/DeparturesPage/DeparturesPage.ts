@@ -1,16 +1,17 @@
 import { BaseElement } from "../BaseElement";
 import { registerElement } from "../../decorators";
 
-const template = require('./DepTable.html')
+const template = require('./DeparturesPage.html')
 
-@registerElement('dep-table')
-class DepTable extends BaseElement {
+@registerElement('departures-page')
+class DeparturesPage extends BaseElement {
   constructor() {
     super(template)
+
+    this.classList.add('departures-page')
   }
 
   render() {
-    console.trace('dep table')
     this.innerHTML = this.compiledTemplate({
       stopId: this.stopId
     })

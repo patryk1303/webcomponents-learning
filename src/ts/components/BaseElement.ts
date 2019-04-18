@@ -4,7 +4,7 @@ import Handlebars from 'handlebars'
  * Base class for project's Web Components
  */
 export class BaseElement extends HTMLElement {
-  protected compiledTemplate: Function
+  protected compiledTemplate: Handlebars.TemplateDelegate<any>
 
   constructor(template: string) {
     super()
@@ -13,7 +13,7 @@ export class BaseElement extends HTMLElement {
   }
 
   render() {
-    this.innerHTML = this.compiledTemplate()
+    this.innerHTML = this.compiledTemplate({})
   }
 
   connectedCallback() {

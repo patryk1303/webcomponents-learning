@@ -1,7 +1,7 @@
-import { BaseElement } from "../../BaseElement";
-import { registerElement } from "../../../decorators";
+import { BaseElement } from "../BaseElement";
+import { registerElement } from "../../decorators";
 
-const template = require('./DeparutresTableRow.html')
+const template = require('./DeparturesListRow.html')
 
 interface RowData {
   header?: boolean,
@@ -12,12 +12,14 @@ interface RowData {
   estimated?: boolean
 }
 
-@registerElement('deparutres-table-row')
+@registerElement('departures-list-row')
 class DeparutresTableRow extends BaseElement {
   rowData: RowData
 
   constructor() {
     super(template)
+
+    this.classList.add('departures-list__row', ...this.usedClasses)
 
     this.rowData = {}
 
@@ -50,8 +52,8 @@ class DeparutresTableRow extends BaseElement {
   get usedClasses() : string[] {
     let classes : string[] = []
 
-    if(this.dataset.header) {
-      classes.push('departures-table__row--header')
+    if(this.getAttribute('header') === 'true') {
+      classes.push('departures-list__row--header')
     }
 
     return classes
