@@ -62,6 +62,10 @@ class DeparturesTable extends BaseElement {
     }
   }
 
+  disconnectedCallback() {
+    clearInterval(this.intervalId)
+  }
+
   attributeChangedCallback(attrName: string, oldVal: any, newVal: any) {
     if(attrName === 'data-stop-id') {
       this.setupInterval()

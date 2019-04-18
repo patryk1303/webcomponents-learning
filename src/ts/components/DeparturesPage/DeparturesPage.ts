@@ -17,6 +17,12 @@ class DeparturesPage extends BaseElement {
     })
   }
 
+  attributeChangedCallback(attrName: string, oldVal: any, newVal: any) {
+    if (attrName === 'data-stop-id') {
+      this.render()
+    }
+  }
+
   get stopId() {
     return this.dataset.stopId
   }
